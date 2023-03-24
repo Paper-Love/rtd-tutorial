@@ -1,0 +1,806 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="zh-CN" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="zh-CN" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Welcome to Core-3588SJD4 Manual &mdash; Firefly Wiki</title>
+  
+  <meta name="keywords" content="Core-3588SJD4">
+  <meta name="description" content="Core-3588SJD4采用 Rockchip RK3588S新一代旗舰级八核64位处理器，最大可配32GB大内存；支持8K视频编解码；拥有丰富的接口，支持扩展硬盘、支持千兆网、双频 WiFi6 ；支持多种操作系统，提供底板参考设计资料，用户可自主深度定制化。">
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+    <link rel="stylesheet" href="_static/css/theme.css?v=20201016" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="索引" href="genindex.html" />
+    <link rel="search" title="搜索" href="search.html" />
+    <link rel="next" title="1. 介绍" href="started.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          <!-- <img class="logo" src="_images/Logo.png"> -->
+
+            
+           
+          <a href="http://wiki.t-firefly.com/" class="logo_a">
+            <img src="_static/Logo.png" class="logo" alt="Logo" />
+          </a>
+          
+
+          
+
+          
+            <a href="#" class="icon icon-home"> Core-3588SJD4 Manual
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+
+            
+              <p class="caption"><span class="caption-text">上手教程</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="started.html">1. 介绍</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://wiki.t-firefly.com/USB-TO-TTL-Serial/usb-to-ttl-serial.html">2. 串口调试</a></li>
+</ul>
+<p class="caption"><span class="caption-text">升级固件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_bootmode.html">1. 介绍</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_firmware.html">2. 使用USB线缆升级固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_maskrom_mode.html">3. MaskRom模式</a></li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_firmware_sd.html">4. 使用SD卡升级固件</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Linux开发</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="linux_compile.html">1. 编译 Linux 固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="linux_firefly_linux_manual.html">2. Firefly Linux 开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical_cases.html">3. 技术案例</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Android开发</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="android_adb_use.html">1. ADB 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android_prepare_compile_android.html">2. 编译环境搭建</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android_compile_android12.0_firmware.html">3. 编译 Android12.0 固件</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android_firefly_android_manual.html">4. Firefly Android 开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android_fireflyapi2_manual.html">5. FireflyApi2 使用手册</a></li>
+</ul>
+<p class="caption"><span class="caption-text">接口使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage_adc.html">1. ADC 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_camera.html">2. Camera 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_can.html">3. CAN 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_display.html">4. Display 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_gpio.html">5. GPIO 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_led.html">6. LED 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_pwm.html">7. PWM 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rtc.html">8. RTC 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_sata.html">9. SATA 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_spi.html">10. SPI 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_uart.html">11. UART 使用</a></li>
+<li class="toctree-l1"><a class="reference internal" href="usage_watchdog.html">12. Watchdog 使用</a></li>
+</ul>
+<p class="caption"><span class="caption-text">配件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="module_camera.html">1. 摄像头模组</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module_display.html">2. 显示屏模组</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module_wireless.html">3. 通信模组</a></li>
+</ul>
+<p class="caption"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage_npu.html">1. NPU使用</a></li>
+</ul>
+<p class="caption"><span class="caption-text">常见问题解答</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">1. FAQs</a></li>
+</ul>
+<p class="caption"><span class="caption-text">参考资料</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">1. 接口定义</a></li>
+</ul>
+
+            
+
+            
+<style>
+    .wy-menu-vertical a.download:hover{
+        background: none;
+    }
+    .wy-menu-vertical a.download{
+
+        padding: 0;
+        color: #fff;
+
+    }
+</style>
+
+
+<p class="caption">
+    <a href="https://www.t-firefly.com/doc/download/172.html" target="_blank" class="download"><span class="caption-text">资源下载</span></a>
+</p>
+
+
+
+
+
+
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Core-3588SJD4 Manual</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+    @media screen and (max-width: 1100px){
+        .prodcut-show-main{
+            display: none;
+        }
+    }
+    .prodcut-show-main{
+        background: #edf0f2;
+        width: 100%;
+        height: 170px;
+        margin-bottom: 24px;
+    }
+    .prodcut-show-main .prodcut-show-main-left{
+        width: 33%;
+    }
+    .prodcut-show-main .prodcut-show-main-right{
+        width: 64%;
+        margin-top: 36px;
+        margin-right: 18px;
+    }
+    .prodcut-show-main .prodcut-show-main-right p{
+        color: gray;
+        font-size: 84%;
+        height: 74px;
+        overflow-x: hidden;
+    }
+    .product-show-name .fa-pull-left{
+        
+        font-size: 124%;
+        color: #ff6600;
+        font-weight: bolder;
+        
+    }
+    .product-show-name{
+        margin-bottom: 12px;
+    }
+    .product-show-name .fa-pull-right a{
+        
+        background: #ff6600;
+        color: white;
+        padding: 6px 16px;
+        border-radius: 4px;
+        font-size: 80%;
+        margin-left: 10px;
+
+    }
+    .prodcut-show-img{
+        height: 170px;
+	width: 100%;
+    	display: flex;
+    	justify-content: center;
+    	align-items: center;
+    }
+    
+</style>
+
+<div class="prodcut-show-main clearfix">
+    <div class="fa-pull-left prodcut-show-main-left">
+        <div class="prodcut-show-img">
+            <img src="https://www.t-firefly.com/upload/portal/20220514/86deebadcd0f20bc06b8f71aa9f3ae2b.png" alt="">
+        </div>
+    </div>
+    <div class="fa-pull-right prodcut-show-main-right">
+        <div class="product-show-name clearfix">
+            <div class="fa-pull-left ">
+                Core-3588SJD4 <span></span>
+            </div>
+
+            <div class="fa-pull-right">
+                
+                <a href="https://download.t-firefly.com/%E4%BA%A7%E5%93%81%E8%A7%84%E6%A0%BC%E6%96%87%E6%A1%A3/%E6%A0%B8%E5%BF%83%E6%9D%BF/Core-3588SJD4%20%E5%85%AB%E6%A0%B88K%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD%E6%A0%B8%E5%BF%83%E6%9D%BF-%E8%A7%84%E6%A0%BC%E4%B9%A6.pdf" target="_blank">产品规格书</a>
+                
+
+                
+                <a href="https://item.taobao.com/item.htm?id=676534397877" target="_blank">立即购买</a>
+                
+            </div>
+        </div>
+
+        <p>Core-3588SJD4采用 Rockchip RK3588S新一代旗舰级八核64位处理器，最大可配32GB大内存；支持8K视频编解码；拥有丰富的接口，支持扩展硬盘、支持千兆网、双频 WiFi6 ；支持多种操作系统，提供底板参考设计资料，用户可自主深度定制化。</p>
+    </div>
+</div>
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="#">Docs</a> &raquo;</li>
+        
+      <li>Welcome to Core-3588SJD4 Manual</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="welcome-to-core-3588sjd4-manual">
+<h1>Welcome to Core-3588SJD4 Manual<a class="headerlink" href="#welcome-to-core-3588sjd4-manual" title="永久链接至标题">¶</a></h1>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">上手教程</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="started.html">1. 介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="started.html#aio-3588sjd4-biao-zhun-tao-zhuang-bao-han-yi-xia-pei-jian-jin-gong-can-kao">1.1. AIO-3588SJD4 标准套装包含以下配件(仅供参考)：</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference external" href="https://wiki.t-firefly.com/USB-TO-TTL-Serial/usb-to-ttl-serial.html">2. 串口调试</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">升级固件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_bootmode.html">1. 介绍</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_bootmode.html#qian-yan">1.1. 前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_bootmode.html#gu-jian-huo-qu">1.2. 固件获取</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_bootmode.html#sheng-ji-fang-shi">1.3. 升级方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_bootmode.html#qi-dong-cun-chu-qi">1.4. 启动存储器</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_bootmode.html#qi-dong-mo-shi">1.5. 启动模式</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_firmware.html">2. 使用USB线缆升级固件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware.html#qian-yan">2.1. 前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware.html#zhun-bei-gong-ju">2.2. 准备工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware.html#zhun-bei-gu-jian">2.3. 准备固件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware.html#an-zhuang-shao-xie-gong-ju">2.4. 安装烧写工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware.html#jin-ru-sheng-ji-mo-shi">2.5. 进入升级模式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware.html#shao-xie-gu-jian">2.6. 烧写固件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware.html#chang-jian-wen-ti">2.7. 常见问题</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_maskrom_mode.html">3. MaskRom模式</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_maskrom_mode.html#jian-jie">3.1. 简介</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="upgrade_firmware_sd.html">4. 使用SD卡升级固件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware_sd.html#zhun-bei-gong-ju">4.1. 准备工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="upgrade_firmware_sd.html#cao-zuo-bu-zhou">4.2. 操作步骤</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Linux开发</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="linux_compile.html">1. 编译 Linux 固件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="linux_compile.html#huo-qu-sdk">1.1. 获取 SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_compile.html#linux-sdk-pei-zhi-jie-shao">1.2. Linux SDK 配置介绍</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_compile.html#bian-yi-ubuntu-gu-jian">1.3. 编译 Ubuntu 固件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_compile.html#bian-yi-debian-gu-jian">1.4. 编译 Debian 固件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="linux_compile.html#bian-yi-buildroot-gu-jian">1.5. 编译 Buildroot 固件</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="linux_firefly_linux_manual.html">2. Firefly Linux 开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="technical_cases.html">3. 技术案例</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="technical_cases.html#fei-jiang-fastdeploy">3.1. 飞桨 FastDeploy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="technical_cases.html#rong-qi-xu-ni-an-zhuo">3.2. 容器虚拟安卓</a></li>
+<li class="toctree-l2"><a class="reference internal" href="technical_cases.html#rockit-avs">3.3. Rockit AVS</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">Android开发</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="android_adb_use.html">1. ADB 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#qian-yan">1.1. 前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#zhun-bei-lian-jie">1.2. 准备连接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#wang-luo-adb">1.3. 网络 ADB</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#windows-xia-de-adb-an-zhuang">1.4. Windows下的 ADB 安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#ubuntu-xia-de-adb-an-zhuang">1.5. Ubuntu 下的 ADB 安装</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#chang-yong-adb-ming-ling">1.6. 常用 ADB 命令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#tiao-shi">1.7. 调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_adb_use.html#ying-yong-guan-li">1.8. 应用管理</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="android_prepare_compile_android.html">2. 编译环境搭建</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="android_prepare_compile_android.html#zhun-bei-gong-zuo">2.1. 准备工作</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_prepare_compile_android.html#bian-yi-faq">2.2. 编译FAQ</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="android_compile_android12.0_firmware.html">3. 编译 Android12.0 固件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="android_compile_android12.0_firmware.html#xia-zai-android12-0-sdk">3.1. 下载 Android12.0 SDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_compile_android12.0_firmware.html#core-3588sjd4-chan-pin-bian-yi-fang-fa">3.2. Core-3588SJD4 产品编译方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_compile_android12.0_firmware.html#qi-ta-bian-yi-shuo-ming">3.3. 其他编译说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_compile_android12.0_firmware.html#fen-qu-jing-xiang">3.4. 分区镜像</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_compile_android12.0_firmware.html#ota-bian-yi">3.5. OTA 编译</a></li>
+<li class="toctree-l2"><a class="reference internal" href="android_compile_android12.0_firmware.html#chang-jian-wen-ti">3.6. 常见问题</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="android_firefly_android_manual.html">4. Firefly Android 开发指南</a></li>
+<li class="toctree-l1"><a class="reference internal" href="android_fireflyapi2_manual.html">5. FireflyApi2 使用手册</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">接口使用</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage_adc.html">1. ADC 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_adc.html#jian-jie">1.1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_adc.html#ying-jian">1.2. 硬件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_adc.html#dts-pei-zhi">1.3. DTS配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_adc.html#qu-dong-shuo-ming">1.4. 驱动说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_adc.html#jie-kou-shuo-ming">1.5. 接口说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_adc.html#tiao-shi-fang-fa">1.6. 调试方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_adc.html#faqs">1.7. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_camera.html">2. Camera 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#mipi-csi-yong-fa">2.1. MIPI CSI用法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#dcphy">2.2. DCPHY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#dphy">2.3. DPHY</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#full-mode-pei-zhi">2.4. Full Mode配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#split-mode-pei-zhi">2.5. Split Mode配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#ruan-jian-xiang-guan-mu-lu">2.6. 软件相关目录</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#dan-mu-cam-8ms1m-shuang-mu-cam-2ms2mf-she-xiang-tou-de-shi-yong">2.7. 单目CAM-8MS1M/双目CAM-2MS2MF摄像头的使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#camera-di-ceng-tiao-shi">2.8. Camera底层调试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#android-xi-tong-shi-yong-camera-ying-yong">2.9. Android 系统使用 Camera 应用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#linux-xi-tong-yu-lan-she-xiang-tou">2.10. Linux 系统预览摄像头</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#iq-wen-jian">2.11. IQ文件</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_camera.html#faqs">2.12. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_can.html">3. CAN 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_can.html#can-jian-jie">3.1. CAN 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_can.html#ying-jian-lian-jie">3.2. 硬件连接</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_can.html#dts-jie-dian-pei-zhi">3.3. DTS 节点配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_can.html#tong-xin-ce-shi">3.4. 通信测试</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_can.html#geng-duo-zhi-ling">3.5. 更多指令</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_can.html#faqs">3.6. FAQS</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_display.html">4. Display 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_display.html#aio-3588sjd4-xian-shi-jie-kou-de-pei-zhi">4.1. AIO-3588SJD4  显示接口的配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_display.html#aio-3588sjd4-duo-ping-chang-jing-de-pei-zhi">4.2. AIO-3588SJD4  多屏场景的配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_display.html#tiao-shi-shou-duan">4.3. 调试手段</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_gpio.html">5. GPIO 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_gpio.html#jian-jie">5.1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_gpio.html#gpio-yin-jiao-ji-suan">5.2. GPIO引脚计算</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_gpio.html#shu-ru-shu-chu">5.3. 输入输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_gpio.html#zhong-duan">5.4. 中断</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_gpio.html#fu-yong">5.5. 复用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_gpio.html#tiao-shi-fang-fa">5.6. 调试方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_gpio.html#faqs">5.7. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_led.html">6. LED 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_led.html#qian-yan">6.1. 前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_led.html#yi-she-bei-de-fang-shi-kong-zhi-led">6.2. 以设备的方式控制 LED</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_led.html#shi-yong-trigger-fang-shi-kong-zhi-led">6.3. 使用 trigger 方式控制 LED</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_pwm.html">7. PWM 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_pwm.html#qian-yan">7.1. 前言</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_pwm.html#dts-pei-zhi">7.2. DTS配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_pwm.html#jie-kou-shuo-ming">7.3. 接口说明</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_pwm.html#tiao-shi-fang-fa">7.4. 调试方法</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_pwm.html#faqs">7.5. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_rtc.html">8. RTC 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_rtc.html#jian-jie">8.1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_rtc.html#rtc-qu-dong">8.2. RTC驱动</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_rtc.html#jie-kou-shi-yong">8.3. 接口使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_rtc.html#faqs">8.4. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_sata.html">9. SATA 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_sata.html#jian-jie">9.1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_sata.html#ruan-jian-pei-zhi">9.2. 软件配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_sata.html#gua-zai">9.3. 挂载</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_sata.html#du-xie-ce-su">9.4. 读写测速</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_spi.html">10. SPI 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_spi.html#spi-jian-jie">10.1. SPI 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_spi.html#spi-gong-zuo-fang-shi">10.2. SPI 工作方式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_spi.html#qu-dong-bian-xie">10.3. 驱动编写</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_spi.html#jie-kou-shi-yong">10.4. 接口使用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_spi.html#faqs">10.5. FAQs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_uart.html">11. UART 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_uart.html#jian-jie">11.1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_uart.html#dts-pei-zhi">11.2. DTS配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_uart.html#shou-fa-yan-zheng">11.3. 收发验证</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="usage_watchdog.html">12. Watchdog 使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_watchdog.html#jian-jie">12.1. 简介</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_watchdog.html#dts-pei-zhi">12.2. DTS配置</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_watchdog.html#shi-yong">12.3. 使用</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">配件</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="module_camera.html">1. 摄像头模组</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module_display.html">2. 显示屏模组</a></li>
+<li class="toctree-l1"><a class="reference internal" href="module_wireless.html">3. 通信模组</a></li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">其他</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="usage_npu.html">1. NPU使用</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="usage_npu.html#rknn-mo-xing">1.1. RKNN 模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_npu.html#fei-rknn-mo-xing">1.2. 非 RKNN 模型</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_npu.html#rknn-toolkit2-gong-ju">1.3. RKNN-Toolkit2工具</a></li>
+<li class="toctree-l2"><a class="reference internal" href="usage_npu.html#xiang-xi-kai-fa-wen-dang">1.4. 详细开发文档</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">常见问题解答</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="faqs.html">1. FAQs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="faqs.html#guan-yu-bo-ma-kai-guan-de-shi-yong">1.1. 关于拨码开关的使用</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<p class="caption"><span class="caption-text">参考资料</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="interface_definition.html">1. 接口定义</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="interface_definition.html#zheng-ji-jie-kou-ding-yi">1.1. 整机接口定义</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="started.html" class="btn btn-neutral float-right" title="1. 介绍" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2022, Firefly Team.
+    <script>
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?a59c4f3b4ec58882544d7cc51d1d78e1";
+        var s = document.getElementsByTagName("script")[0]; 
+        s.parentNode.insertBefore(hm, s);
+      })();
+      </script>
+      
+    </p>
+    
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'1.0.0',
+            LANGUAGE:'zh_CN',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/language_data.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          
+          SphinxRtdTheme.Navigation.enableSticky();
+          
+      });
+  </script>
+
+  <style>
+    /* 触发弹窗图片的样式 */
+    /* #myImg {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #myImg:hover {
+      opacity: 0.7;
+    } */
+
+    /* 弹窗背景 */
+    .modal-img {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* 设置显示的优先层级级别 */
+      z-index: 1234;
+      /* Sit on top */
+      /* padding-top: 100px; */
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+
+    .modal-img-flex{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* 设置弹出图片的样式 */
+    .modal-content {
+      margin: auto;
+      display: block;
+      max-height: 100%;
+      /* width: 40%; */
+      /* max-width: 430px; */
+    }
+
+    /* 设置文本内容的样式 */
+    /* #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    } */
+
+    /* 设置弹出图片的动画，添加动画 */
+    /* .modal-content{
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    } */
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+
+      to {
+        transform: scale(1)
+      }
+    }
+
+    /* 设置span标签的关闭按钮样式 */
+    .close {
+      position: absolute;
+      top: 100px;
+      right: 400px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 小屏幕中图片宽度为 100% */
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+  </style>
+  
+<div class="modal-img">
+    
+    <img src="" alt="" data-large="" class="modal-content">
+    <span class="close">&times;</span>
+
+</div>
+
+<script type="text/javascript" src="_static/js/zoomsl.min.js"></script>
+
+<script type="text/javascript">
+    jQuery(function () {
+        jQuery('.document a').click(function(){
+          console.log(this.href)
+
+          var fileExt=(/[.]/.exec(this.href)) ? /[^.]+$/.exec(this.href.toLowerCase()) : '';
+
+          if(fileExt[0] === 'jpg' || fileExt[0] === 'png' || fileExt[0] === 'jpeg'){
+            jQuery('.modal-img').addClass('modal-img-flex');
+            jQuery('.modal-content').attr('src', this.href);
+            jQuery('.modal-content').data('large', this.href);
+
+            // jQuery('.modal-content').imagezoomsl({
+            //   magnifiereffectanimate: "fadeIn"
+            // });
+            return false
+          }
+          
+        })
+
+        jQuery('.modal-img').click(function(){
+            // jQuery('.modal-img').hide()
+            jQuery('.modal-img').removeClass('modal-img-flex');
+            jQuery('.modal-content').attr('src', '');
+        })
+    });
+</script> 
+
+</body>
+</html>
