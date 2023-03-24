@@ -1,14 +1,11 @@
+
+
 网页文档 网页文档 网页文档！！！
 ===================================
 第一章 VMware虚拟机软件安装
 --------
-.. note::
-.. toctree::
-
-   usage
-   api
 1.1 VMware软件的下载与购买::
-1.2 VMware软件的安装	- 5 -
+1.2 VMware软件的安装
 第二章 加载已有ubuntu开发环境
 --------
 第三章 搭建新的ubuntu开发环境
@@ -476,22 +473,3 @@ Watchdog Ticking Away!
 
 
 
-**Lumache** (/lu'make/) is a Python library for cooks and food lovers
-that creates recipes mixing random ingredients.
-It pulls data from the `Open Food Facts database <https://world.openfoodfacts.org/>`_
-and offers a *simple* and *intuitive* API.
-
-Check out the :doc:`usage` section for further information, including
-how to :ref:`installation` the project.
-
-.. note::
-
-   This project is under active development.
-
-Contents
---------
-
-.. toctree::
-
-   usage
-   api
